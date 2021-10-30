@@ -1,0 +1,273 @@
+{
+  "Actor": {
+    "types": ["hero", "supervillain"],
+    "templates": {
+      "base": {
+        "common": {
+          "name": "",
+          "value": "",
+          "mod": ""
+        },
+        "abilities": {
+          "str": {
+            "value": 0,
+            "mod": 0,
+            "label": "Strength",
+            "total": 0
+          },
+          "sta": {
+            "value": 0,
+            "mod": 0,
+            "label": "Stamina",
+            "total": 0
+          },
+          "agl": {
+            "value": 0,
+            "mod": 0,
+            "label": "Agility",
+            "total": 0
+          },
+          "dex": {
+            "value": 0,
+            "mod": 0,
+            "label": "Dexterity",
+            "total": 0
+          },
+          "fgt": {
+            "value": 0,
+            "mod": 0,
+            "label": "Fighting",
+            "total": 0
+          },
+          "int": {
+            "value": 0,
+            "mod": 0,
+            "label": "Intellect",
+            "total": 0
+          },
+          "awe": {
+            "value": 0,
+            "mod": 0,
+            "label": "Awareness",
+            "total": 0
+          },
+          "pre": {
+            "value": 0,
+            "mod": 0,
+            "label": "Presence",
+            "total": 0
+          }
+        },
+        "skills": {
+          "acrobatics": {
+            "name": "Acrobatics",
+            "value": 0,
+            "mod": 0,
+            "ability": "AGL"
+          },
+          "athletics": {
+            "name": "Athletics",
+            "value": 0,
+            "mod": 0,
+            "ability": "STR"
+          },
+          "closecombat": {
+            "name": "Close-Combat",
+            "value": 0,
+            "mod": 0,
+            "ability": "FGT"
+          },
+          "deception": {
+            "name": "Deception",
+            "value": 0,
+            "mod": 0,
+            "ability": "PRE"
+          },
+          "expertise": {
+            "name": "Expertise",
+            "value": 0,
+            "mod": 0,
+            "ability": "INT"
+          },
+          "insight": {
+            "name": "Insight",
+            "value": 0,
+            "mod": 0,
+            "ability": "AWE"
+          },
+          "intimidation": {
+            "name": "Intimidation",
+            "value": 0,
+            "mod": 0,
+            "ability": "PRE"
+          },
+          "investigation": {
+            "name": "Investigation",
+            "value": 0,
+            "mod": 0,
+            "ability": "INT"
+          },
+          "rangedcombat": {
+            "name": "Ranged-Combat",
+            "value": 0,
+            "mod": 0,
+            "ability": "DEX"
+          },
+          "slightofhand": {
+            "name": "Slight of Hand",
+            "value": 0,
+            "mod": 0,
+            "ability": "DEX"
+          },
+          "stealth": {
+            "name": "Stealth",
+            "value": 0,
+            "mod": 0,
+            "ability": "AGL"
+          },
+          "technology": {
+            "name": "Technology",
+            "value": 0,
+            "mod": 0,
+            "ability": "INT"
+          },
+          "treatment": {
+            "name": "Treatment",
+            "value": 0,
+            "mod": 0,
+            "ability": "INT"
+          },
+          "vehicles": {
+            "name": "Vehicles",
+            "value": 0,
+            "mod": 0,
+            "ability": "DEX"
+          }
+        },
+        "advantages": {
+
+        },
+        "complications": {
+
+        },
+        "defenses": {
+            "dodge": {
+                "value": 0,
+                "mod": 0,
+                "ability": "agl"
+            },
+            "parry": {
+                "value": 0,
+                "mod": 0,
+                "ability": "fgt"
+            },
+            "fortitude": {
+                "value": 0,
+                "mod": 0,
+                "ability": "sta"
+            },
+            "will": {
+              "value": 0,
+              "mod": 0,
+              "ability": "awe"
+            },
+            "toughness": {
+                "value": 0,
+                "mod": 0,
+                "ability": "sta"
+            }
+        }
+      }
+    },
+    "hero": {
+      "templates": ["base"],
+      "biography": "Biography",
+      "powerlevel": "Power Level",
+      "pptotal": "Power Points",
+      "secret": "",
+      "public": "",
+      "advantagesTotal": 0,
+      "totalRank": "",
+      "totalSkill": "",
+      "skillsTotal": 0,
+      "totalAbil": "",
+      "totalDef": "",
+      "grandTotal": "",
+      "initMod": "",
+      "vehicleCost": "",
+      "motivations": "Motivations"
+    }
+  },
+  "Item": {
+    "types": ["advantage", "armor", "complication", "device", "equipment", "Power","Power Effect", "weapon", "vehicle"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "equipment": {
+      "templates": ["base"],
+        "category": "",
+        "effect": "",
+        "cost": 0
+    },
+    "armor": {
+      "templates": ["base"]
+    },
+    "device": {
+      "templates": ["base"]
+    },
+    "weapon": {
+      "templates": ["itemBase"],
+      "critical": 20
+    },
+    "advantage": {
+      "templates": ["base"],
+        "rank": "",
+        "costperrank": "",
+        "totalcost": "",
+        "effect": ""
+    },
+    "complication": {
+      "templates": ["base"],
+        "rank": "",
+        "costperrank": "",
+        "totalcost": "",
+        "effect": ""
+    },
+    "Power": {
+      "description": "",
+      "descriptor": [],
+      "rank": 0,
+      "effects": [],
+      "cost": 0,
+      "isAlternate": false
+    },
+    "Power Effect": {
+      "templates": ["base"],
+      "effectType":"",
+      "action": "",
+      "range": "",
+      "duration": "",
+      "resistance": "",
+      "costType": "",
+      "cost": 0,
+      "rank": 1,
+      "modifiers": ""
+       },
+    "vehicle": {
+      "templates": ["base"],
+        "description": "Vehicle Description",
+        "size": "",
+        "strength": "",
+        "speed": "",
+        "defense": "",
+        "toughness": "",
+        "totalVCost": "",
+        "vFeatures": "Vehicle Features",
+        "vPowers": "Vehicle Powers",
+        "powercost": ""
+    }
+  }
+}
+

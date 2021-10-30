@@ -7,11 +7,11 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/mnm3e/templates/actor/parts/actor-stats.html",
-    "systems/mnm3e/templates/actor/parts/actor-combat.html",
-    "systems/mnm3e/templates/actor/parts/actor-effects.html",
-    "systems/mnm3e/templates/actor/parts/actor-items.html",
-    "systems/mnm3e/templates/actor/parts/actor-powers.html",
-    "systems/mnm3e/templates/actor/parts/actor-origins.html"
+    "systems/mnm3e/templates/actor/parts/actor-stats.hbs",
+    "systems/mnm3e/templates/actor/parts/actor-combat.hbs",
+    "systems/mnm3e/templates/actor/parts/actor-effects.hbs",
+    "systems/mnm3e/templates/actor/parts/actor-items.hbs",
+    "systems/mnm3e/templates/actor/parts/actor-powers.hbs",
+    "systems/mnm3e/templates/actor/parts/actor-origins.hbs"
   ]);
 };

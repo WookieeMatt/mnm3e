@@ -10,7 +10,7 @@ export class MNM3EActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["mnm3e", "sheet", "actor"],
-      template: "systems/mnm3e/templates/actor/actor-sheet.html",
+      template: "systems/mnm3e/templates/actor/actor-sheet.hbs",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
@@ -19,7 +19,7 @@ export class MNM3EActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/mnm3e/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/mnm3e/templates/actor/actor-${this.actor.data.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
@@ -69,9 +69,15 @@ export class MNM3EActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.MNM3E.abilities[k]) ?? k;
     }
-  }
+
+      /* Skill Labels */
+      for (let [key, skills] of Object.entries(context.data.skills)){
+        skills.label = game.i18n.localize(MNM3E.skills_ability[key]);
+        skills.name = game.i18n.localize(MNM3E.skills_name[key])
+      }
+    }
 
   /**
    * Organize and classify Items for Character sheets.
@@ -138,7 +144,7 @@ export class MNM3EActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
-    if (this.actor.owner) {
+    if (this.actor) {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
         if (li.classList.contains("inventory-header")) return;

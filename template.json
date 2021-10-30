@@ -181,7 +181,7 @@
     },
     "hero": {
       "templates": ["base"],
-      "biography": "Biography",
+      "origins": "Origins",
       "powerlevel": "Power Level",
       "pptotal": "Power Points",
       "secret": "",

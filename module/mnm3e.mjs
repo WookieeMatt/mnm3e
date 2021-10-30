@@ -6,7 +6,7 @@ import { MNM3EActorSheet } from "./sheets/actor-sheet.mjs";
 import { MNM3EItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { BOILERPLATE } from "./helpers/config.mjs";
+import { MNM3E } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -23,7 +23,7 @@ Hooks.once('init', async function() {
   };
 
   // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
+  CONFIG.MNM3E = MNM3E;
 
   /**
    * Set an initiative formula for the system

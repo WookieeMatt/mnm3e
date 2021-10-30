@@ -4,7 +4,8 @@
  * @return {Promise}
  */
  export const preloadHandlebarsTemplates = async function() {
-  return loadTemplates([
+  const templatePaths = [
+  
 
     // Actor partials.
     "systems/mnm3e/templates/actor/parts/actor-stats.hbs",
@@ -13,5 +14,7 @@
     "systems/mnm3e/templates/actor/parts/actor-items.hbs",
     "systems/mnm3e/templates/actor/parts/actor-powers.hbs",
     "systems/mnm3e/templates/actor/parts/actor-origins.hbs"
-  ]);
+  ];
+  
+  return loadTemplates(templatePaths);
 };

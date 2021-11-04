@@ -31,7 +31,7 @@ MNM3E.skills_name = {
 }
 
 MNM3E.abilityAbbreviations = {
-  "str": "MUTANTS3e.AbilityStrAbbr",
+  "str": "MNM3E.AbilityStrAbbr",
   "dex": "MNM3E.AbilityDexAbbr",
   "con": "MNM3E.AbilityConAbbr",
   "int": "MNM3E.AbilityIntAbbr",

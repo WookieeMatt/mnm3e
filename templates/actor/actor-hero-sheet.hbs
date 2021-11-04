@@ -49,6 +49,7 @@
     <a class="item" data-tab="combat">Combat</a>
     <a class="item" data-tab="items">Items</a>
     <a class="item" data-tab="powers">Powers</a>
+    <a class="item" data-tab="effects">Effects</a>
     <a class="item" data-tab="origins">Origins</a>
   </nav>
 
@@ -65,9 +66,14 @@
 
     </div>
 
-    {{!-- Origins Tab --}}
-    <div class="tab origins" data-group="primary" data-tab="origins">
-       {{> "systems/mnm3e/templates/actor/parts/actor-origins.hbs"}}
+    {{!-- Combat Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="combat">
+      {{> "systems/mnm3e/templates/actor/parts/actor-combat.hbs"}}
+    </div>
+    
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+       {{> "systems/mnm3e/templates/actor/parts/actor-items.hbs"}}
     </div>
 
     {{!-- Powers Tab --}}
@@ -75,14 +81,16 @@
           {{> "systems/mnm3e/templates/actor/parts/actor-powers.hbs"}}
     </div>
 
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/mnm3e/templates/actor/parts/actor-items.hbs"}}
-    </div>
-
-    {{!-- Active Effects Tab --}}
+    {{!-- Effects Tab --}}
     <div class="tab effects flexcol" data-group="primary" data-tab="effects">
       {{> "systems/mnm3e/templates/actor/parts/actor-effects.hbs"}}
+    </div>
+
+    {{!-- Origins Tab --}}
+    <div class="tab origins" data-group="primary" data-tab="origins">
+       <section class="main grid-span-2">
+          {{> "systems/mnm3e/templates/actor/parts/actor-origins.hbs"}}
+       </section>
     </div>
 
   </section>

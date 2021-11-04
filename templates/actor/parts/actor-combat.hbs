@@ -1,33 +1,34 @@
 <div class="attribute initiative">
-  <span>{{localize "MUTANTS.modifier"}}</span>
-  <input name="data.initMod" type="text" data-dtype="Number" placeholder="0" value="{{data.initMod}}">
+     <span>{{localize "MUTANTS.modifier"}}</span>
+     <input name="data.initMod" type="text" data-dtype="Number" placeholder="0" value="{{data.initMod}}">
 </div>
-<div class="combat-grid">
-  {{!-- Defense --}}
-  <ul class="defense-scores flexrow">
-    {{#each data.defenses as |defenses key|}}
-    <li class="defense-scores-item" data-ability="{{key}}">
-      <label for="data.defenses.{{key}}.value" class="resource-label">{{defenses.name}}</label>
-      <input name="data.defenses.{{key}}.value" type="number" value="{{defenses.value}}" data-dtype="Number" />
-      <label style="text-align: center" class="resource-label" for="data.defenses.{{key}}.ability">{{defenses.ability}}</label>
-      <input readonly type="number" value="{{defenses.abilityMod}}" data-dtype="Number" />
-      <label type="text" name="mod" class="resource-label">{{localize "MUTANTS.mod"}}</label>
-      <input name="data.defenses.{{key}}.mod" type="number" value="{{defenses.mod}}" data-dtype="Number" />
-      <div class="ability-modifiers flexrow">
-        <span class="ability-mod rollable3" data-type="defenses" data-roll="{{key}}" data-label="{{key}}">{{numberFormat defenses.total decimals=0 sign=true}}</span>
-      </div>
-    </li>
-    {{/each}}
-  </ul>
-  {{!-- Combat Skills --}}
   <div class="combat-grid">
+  {{!-- Defense --}}
     <ul class="defense-scores flexrow">
-      <li class="defense-scores-item" data-attribute="{{data.skills.closecombat.value}}">
-        <span class="rollable"><i class="fas fa-dice"></i><span>Close Combat +{{data.skills.closecombat.value}}</span></span>
-      </li>
-      <li class="defense-scores-item" data-ability="{{data.skills.rangedcombat.ability}}">
-        <label>Ranged Attack +{{data.skills.rangedcombat.value}}</label>
-      </li>
-    </ul>
+      {{#each data.defenses as |defenses key|}}
+       <li class="defense-scores-item" data-ability="{{key}}">
+          <label for="data.defenses.{{key}}.value" class="resource-label">{{defenses.name}}</label>
+          <input name="data.defenses.{{key}}.value" type="number" value="{{defenses.value}}" data-dtype="Number"/>
+          <label style="text-align: center" class="resource-label" for="data.defenses.{{key}}.ability">{{defenses.ability}}</label>
+          <input readonly type="number" value="{{defenses.abilityMod}}" data-dtype="Number"/>
+          <label type="text" name="mod" class="resource-label">{{localize "MUTANTS.mod"}}</label>
+          <input name="data.defenses.{{key}}.mod" type="number" value="{{defenses.mod}}" data-dtype="Number"/>
+          <div class="ability-modifiers flexrow">
+              <span class="ability-mod rollable3" data-type="defenses" data-roll="{{key}}" data-label="{{key}}">{{numberFormat defenses.total decimals=0 sign=true}}</span>
+          </div>
+       </li>
+     {{/each}}
+     </ul>
+     {{!-- Combat Skills --}}
+      <div class="combat-grid">
+        <ul class="defense-scores flexrow">
+        <li class="defense-scores-item" data-attribute="{{data.skills.closecombat.value}}">
+          <span class="rollable"><i class="fas fa-dice"></i><span>Close Combat +{{data.skills.closecombat.value}}</span></span>
+        </li>
+        <li class="defense-scores-item" data-ability="{{data.skills.rangedcombat.ability}}">
+          <label>Ranged Attack +{{data.skills.rangedcombat.value}}</label>
+        </li>
+        </ul>
+      </div>
   </div>
 </div>

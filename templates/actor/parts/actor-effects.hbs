@@ -1,6 +1,6 @@
-<ol class="items-list effects-list">
+<div class="items-list effects-list">
   {{#each effects as |section sid|}}
-    <li class="items-header flexrow" data-effect-type="{{section.type}}">
+    <div class="items-header flexrow" data-effect-type="{{section.type}}">
       <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
       <div class="effect-source">Source</div>
       <div class="effect-source">Duration</div>
@@ -9,7 +9,7 @@
           <i class="fas fa-plus"></i> {{localize "MNM3E.Add"}}
         </a>
       </div>
-    </li>
+    </div>
 
     <ol class="item-list">
     {{#each section.effects as |effect|}}
@@ -35,4 +35,4 @@
     {{/each}}
     </ol>
   {{/each}}
-</ol>
+</div>

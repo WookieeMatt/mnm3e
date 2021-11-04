@@ -1,34 +1,33 @@
-<ol class="items-list">
+<div class="items-list">
   {{!-- Ability Scores --}}
-          <ul class="ability-scores flexrow">
-          {{#each data.abilities as |ability key|}}
-              <li class="ability flexcol flex-group-center" data-ability="{{key}}">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{ability.label}}</label>
-                <input name="data.abilities.{{key}}.value" type="number" value="{{ability.value}}" data-dtype="Number"/>
-                <label type="text" name="mod" class="resource-label">{{localize "MNM3E.mod"}}</label>
-                <input name="data.abilities.{{key}}.mod" type="number" value="{{ability.mod}}" data-dtype="Number"/>
-                <div class="ability-modifiers flexrow">
-                    <span class="ability-mod rollable2" name="ability.total" value="{{ability.total}}" data-roll="{{key}}" data-label="{{key}}">{{numberFormat ability.total decimals=0 sign=true}}</span>
-                  </div>
-              </li>
-          {{/each}}
-          </ul>
+  <ul class="ability-scores flexrow">
+    {{#each data.abilities as |ability key|}}
+    <li class="ability flexcol flex-group-center" data-ability="{{key}}">
+      <label for="data.abilities.{{key}}.value" class="resource-label">{{ability.label}}</label>
+      <input name="data.abilities.{{key}}.value" type="number" value="{{ability.value}}" data-dtype="Number" />
+      <label type="text" name="mod" class="resource-label">{{localize "MNM3E.mod"}}</label>
+      <input name="data.abilities.{{key}}.mod" type="number" value="{{ability.mod}}" data-dtype="Number" />
+      <div class="ability-modifiers flexrow">
+        <span class="ability-mod rollable2" name="ability.total" value="{{ability.total}}" data-roll="{{key}}" data-label="{{key}}">{{numberFormat ability.total decimals=0 sign=true}}</span>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
 
-          {{!-- Skills --}}
-            <ul class="skills-list">
-              {{#each data.skills as |skills key|}}
-                  <li class="skill flexrow flex-group-center">
-                    <label for="data.skills.{{key}}.value" class="resource-label">{{skills.name}}</label>
-                    <input name="data.skills.{{key}}.value" type="number" value="{{skills.value}}" data-dtype="Number"  style="margin-left: 20px;"/>
-                    <label style="text-align: center" class="resource-label" for="data.skills.{{key}}.ability">{{skills.ability}}</label>
-                    <input readonly name="data.skills.{{key}}.total" type="hidden" value="{{skills.abilityMod}}" data-dtype="Number"/>
-                    <label type="text" name="mod" class="resource-label">{{localize "MNM3E.mod"}}</label>
-                     <div class="ability-modifiers flexrow">
-                        <input name="data.skills.{{key}}.mod" type="number" value="{{skills.mod}}" data-dtype="Number"/>
-                     </div>
-                     <span class="ability-mod rollable" data-type="skills"  data-roll="{{key}}" data-label="{{key}}">{{numberFormat skills.total decimals=0 sign=true}}</span>
-                  </li>
-              {{/each}}
-            </ul>
-        </div>
-</ol>
+  {{!-- Skills --}}
+  <ul class="skills-list">
+    {{#each data.skills as |skills key|}}
+    <li class="skill flexrow flex-group-center">
+      <label for="data.skills.{{key}}.value" class="resource-label">{{skills.name}}</label>
+      <input name="data.skills.{{key}}.value" type="number" value="{{skills.value}}" data-dtype="Number" style="margin-left: 20px;" />
+      <label style="text-align: center" class="resource-label" for="data.skills.{{key}}.ability">{{skills.ability}}</label>
+      <input readonly name="data.skills.{{key}}.total" type="hidden" value="{{skills.abilityMod}}" data-dtype="Number" />
+      <label type="text" name="mod" class="resource-label">{{localize "MNM3E.mod"}}</label>
+      <div class="ability-modifiers flexrow">
+        <input name="data.skills.{{key}}.mod" type="number" value="{{skills.mod}}" data-dtype="Number" />
+      </div>
+      <span class="ability-mod rollable" data-type="skills" data-roll="{{key}}" data-label="{{key}}">{{numberFormat skills.total decimals=0 sign=true}}</span>
+    </li>
+    {{/each}}
+  </ul>
+</div>
